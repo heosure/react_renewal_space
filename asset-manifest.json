@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_renewal_space/static/css/main.e2d457dc.css",
+    "main.js": "/react_renewal_space/static/js/main.bdc21a4b.js",
+    "static/js/787.e76d4d7e.chunk.js": "/react_renewal_space/static/js/787.e76d4d7e.chunk.js",
+    "index.html": "/react_renewal_space/index.html",
+    "main.e2d457dc.css.map": "/react_renewal_space/static/css/main.e2d457dc.css.map",
+    "main.bdc21a4b.js.map": "/react_renewal_space/static/js/main.bdc21a4b.js.map",
+    "787.e76d4d7e.chunk.js.map": "/react_renewal_space/static/js/787.e76d4d7e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2d457dc.css",
+    "static/js/main.bdc21a4b.js"
+  ]
+}
