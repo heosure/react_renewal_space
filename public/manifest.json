@@ -1,0 +1,20 @@
+{
+  "short_name": "React_space",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "logoFavi.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logoFavi.jpg",
+      "type": "image/jpg",
+      "sizes": "200x199"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

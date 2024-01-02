@@ -1,0 +1,13 @@
+.MoreBth {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  color: var(--main-w1);
+  background-color: var(--main-b);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.MoreBth:hover,
+.MoreBth:focus {
+  background-color: var(--point);
+}

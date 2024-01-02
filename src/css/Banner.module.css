@@ -1,0 +1,65 @@
+.sec1 {
+  height: 65vh;
+  overflow: hidden;
+  margin-top: 16.5rem;
+}
+.sec1 h2 {
+  display: none;
+}
+.sec1 > div {
+  width: 100%;
+  height: 100%;
+}
+.sec1 .banSlide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sec1 .bImg {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-w1);
+}
+.sec1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sec1 .bDesc {
+  min-width: 30rem;
+  border-radius: var(--gap-s);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-s);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-w2);
+  padding: var(--gap-b);
+}
+.sec1 .bDesc strong {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.sec1 .bDesc p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.sec1 .bName {
+  background-color: var(--main-g2);
+  margin-top: var(--gap-s);
+  padding: calc(var(--gap-s) / 2) var(--gap-s);
+  border: none;
+  border-radius: var(--gap-s);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sec1 .bName:hover,
+.sec1 .bName:focus {
+  background-color: var(--point);
+  color: var(--main-w1);
+}

@@ -1,0 +1,17 @@
+.closeBtn {
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.closeBtn span {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+.closeBtn:hover span {
+  color: var(--point);
+}
+.closeBtn:hover path {
+  fill: var(--point);
+}

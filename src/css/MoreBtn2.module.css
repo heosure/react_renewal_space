@@ -1,0 +1,12 @@
+.moreBtn2 {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--main-b);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.moreBtn2:hover,
+.moreBtn2:focus {
+  color: var(--point);
+}

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/* font-family: 'Noto Sans KR', sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@300;500&display=swap");
+
+:root {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  --main-b: rgba(0, 0, 0, 1);
+  --main-g1: rgba(150, 150, 150, 1);
+  --main-g2: rgba(217, 217, 217, 1);
+  --main-w1: rgba(255, 255, 255, 1);
+  --main-w2: rgba(255, 255, 255, 0.5);
+  --point: rgba(97, 102, 215, 1);
+  --gap-b: 5rem;
+  --gap-s: 2rem;
+}
+body {
+  font-family: "Noto Sans KR";
+}
+.eventCon,
+.loginCon {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.eventmodal,
+.loginModal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-w1);
+  padding: var(--gap-b);
+  border-radius: var(--gap-s);
+  gap: var(--gap-s);
+}
+.eventmodal .imgCon {
+  position: relative;
+}
+.eventmodal .imgCon img {
+  min-width: 30rem;
+  width: 100%;
+}
+.loginModal {
+  text-align: center;
+}
+.loginModal .loginInput,
+.loginModal .snsMember {
+  display: flex;
+  flex-direction: column;
+}
+.loginInput strong {
+  padding-bottom: var(--gap-s);
+  font-size: 3rem;
+}
+.loginInput input {
+  font-size: var(--gap-s);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--main-g2);
+}
+.loginInput button {
+  border: none;
+  outline: none;
+  margin-top: var(--gap-s);
+  padding: calc(var(--gap-s) / 2) 0;
+  color: var(--main-w1);
+  background-color: var(--main-b);
+  cursor: pointer;
+}
+.loginInput button:hover,
+.loginInput button:focus {
+  background-color: var(--point);
+}
+.loginLink {
+  display: flex;
+  font-size: var(--gap-s);
+  gap: var(--gap-s);
+  white-space: nowrap;
+}
+.loginLink > a:hover span {
+  color: var(--point);
+}
+.loginModal .snsMember {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  color: var(--main-w1);
+}
+.snsMember a {
+  padding: var(--gap-s);
+  white-space: nowrap;
+}
+.snsMember a:nth-of-type(1) {
+  background-color: rgba(59, 89, 152, 1);
+}
+.snsMember a:nth-of-type(2) {
+  background-color: rgba(0, 172, 237, 1);
+}
+.snsMember a:nth-of-type(3) {
+  background-color: rgba(8, 202, 0, 1);
+}
+.searchModal {
+  display: flex;
+  position: absolute;
+  border: 1px solid var(--main-g2);
+  border-radius: var(--gap-s) 0 0;
+  background-color: var(--main-w1);
+  padding: var(--gap-s);
+  right: 0;
+  top: 16rem;
+}
+.searchModal input {
+  white-space: nowrap;
+}
+.hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--main-w1);
+  z-index: 999;
+}
+.hd .logo {
+  max-width: 200px;
+  min-width: 100px;
+  padding: 4rem 1rem 2rem;
+}
+.logo {
+  width: 100%;
+}
+.hd .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  width: 100%;
+}
+.navBar .lang,
+.navBar .gnb,
+.navBar .my {
+  display: flex;
+}
+.navBar .lang a,
+.navBar .gnb a {
+  display: block;
+  padding: 2rem 1rem;
+  transition: 0.3s;
+}
+.navBar .gnb a {
+  padding: 2rem;
+}
+.navBar .lang a:hover,
+.navBar .lang a:focus,
+.navBar .gnb a:hover,
+.navBar .gnb a:focus {
+  color: var(--point);
+}
+.navBar .my button,
+.navBar .ham button {
+  display: block;
+  padding: 1.9rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.navBar .my button path,
+.navBar .ham button path {
+  transition: 0.3s;
+}
+.navBar .my button:hover path,
+.navBar .my button:focus path,
+.navBar .ham button:hover path,
+.navBar .ham button:focus path {
+  fill: var(--point);
+}
+.navBar .ham {
+  display: none;
+}
+.ft {
+  border-top: 3px solid var(--main-b);
+  max-width: 1800px;
+  width: (100% - var(--gap-s));
+  margin: calc(var(--gap-b) * 2.5) auto 0;
+}
+.ft .ftCon {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--gap-s);
+  font-size: calc(var(--gap-s) / 1.5);
+  line-height: var(--gap-s);
+  padding: var(--gap-s);
+  white-space: nowrap;
+}
+.ftCon .linkdesc {
+  margin-top: var(--gap-s);
+  display: flex;
+  gap: var(--gap-s);
+}
+.ftCon .linkdesc a {
+  border-bottom: 2px solid var(--main-b);
+  transition: 0.3s;
+}
+.ftCon .linkdesc a:hover,
+.ftCon .linkdesc a:focus {
+  border-bottom: 2px solid var(--point);
+  color: var(--point);
+}
+.ft .SNS {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  gap: var(--gap-s);
+  padding-top: var(--gap-s);
+}
+.SNS a {
+  width: 100%;
+}
+.SNS img {
+  min-width: 6rem;
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-g1);
+  border: 1px solid var(--main-b);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--main-b);
+}
+@media (max-width: 1100px) {
+  .hd .gnb {
+    display: none;
+    position: fixed;
+  }
+  .hd .gnb.on {
+    display: block;
+    background-color: var(--main-w2);
+    right: 0;
+    top: 17rem;
+    width: 60%;
+    height: 100vh;
+    padding: var(--gap-b) 0;
+    backdrop-filter: blur(10px);
+    border-radius: var(--gap-s) 0 0 0;
+  }
+  .navBar .ham {
+    display: block;
+  }
+  .ft .ftCon {
+    font-size: calc(var(--gap-s) / 2);
+  }
+  .ft .ftCon {
+    display: block;
+  }
+  .ft .SNS {
+    width: 30%;
+  }
+}

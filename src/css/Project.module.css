@@ -1,0 +1,51 @@
+.sec2 {
+  max-width: 1800px;
+  width: calc(100% - var(--gap-s));
+  margin: calc(var(--gap-b) * 2.5) auto 0;
+}
+.sec2 > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--gap-s);
+}
+.sec2 h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.sec2 .pjCon {
+  display: grid;
+  grid-template-columns: repeat(3, calc((100% - (var(--gap-b) * 2)) / 3));
+  gap: var(--gap-b);
+  overflow: hidden;
+}
+.sec2 .pjDesc {
+  width: 100%;
+  height: 100%;
+}
+.sec2 .pjImg {
+  width: 100%;
+  padding-top: 70%;
+  position: relative;
+}
+.sec2 img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pjDesc span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1100px) {
+  .sec2 .pjCon {
+    gap: var(--gap-s);
+    grid-template-columns: repeat(2, calc((100% - var(--gap-s)) / 2));
+  }
+}
