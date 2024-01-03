@@ -19,17 +19,17 @@ export default function TourMap({ dpData }) {
       // 지도 생성
       const map = new window.kakao.maps.Map(mapRef.current, options);
       // 지도 마크
-      var marker = new window.kakao.maps.Marker({
+      const marker = new window.kakao.maps.Marker({
         position: map.getCenter(),
       });
       marker.setMap(map);
 
       window.kakao.maps.event.addListener(map, "click", function (mouseEvent) {
-        var latlng = mouseEvent.latLng;
+        const latlng = mouseEvent.latLng;
         marker.setPosition(latlng);
-        var message = "클릭한 위치의 위도는 " + latlng.getLat() + " 이고, ";
+        const message = "클릭한 위치의 위도는 " + latlng.getLat() + " 이고, ";
         message += "경도는 " + latlng.getLng() + " 입니다";
-        var resultDiv = document.getElementById("clickLatlng");
+        const resultDiv = document.getElementById("clickLatlng");
         resultDiv.innerHTML = message;
       });
     }
