@@ -5,23 +5,27 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Layout() {
-  let [event, Setevent] = useState(true);
+  let [event, setevent] = useState(true);
   let [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [useLocation().pathname]);
+
+  useEffect(() => {
+    if (event) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [event]);
+
   return (
     <>
-      <div onScroll={ScrollTop()} />
-      <AdjModal event={event} Setevent={Setevent} />
+      <AdjModal event={event} setevent={setevent} />
       <Header open={open} setOpen={setOpen} />
       <Outlet></Outlet>
       <Footer />
     </>
   );
-}
-
-function ScrollTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LoginModal from "../components/LoginModal";
 import SearchModal from "../components/SearchModal";
@@ -37,6 +37,15 @@ const barIcon = (
 export default function Header({ open, setOpen }) {
   let [isActive, setIsActive] = useState(false);
   let [search, SetSearch] = useState(false);
+
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "unset";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [!open]);
+
   return (
     <header className="hd">
       <h1 className="logo">
